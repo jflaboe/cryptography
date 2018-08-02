@@ -129,12 +129,30 @@
     The Caesar cipher is the most basic monoalphabetic cipher, where each letter is substituted with the letter some <i>n</i> letters in front of it. Therefore, there are only 26 unique keys.
   </li><br><br>
   
-  <li> A monoalphabetic cipher is a simple substitution cipher in which each letter is mapped uniquely to another. Therefore there are 26! possible keys.
+  <li>
+    A monoalphabetic cipher is a simple substitution cipher in which each letter is mapped uniquely to another. Therefore there are 26! possible keys.
   </li><br><br>
   
-  <li> The Playfair cipher is a substitution cipher that is not monoalphabetic. The key is formed using a 5x5 grid, one space for each letter except for i/j, which share a space. The plain text is encoded two letters at a time. If the letters are in the same row of the key square, the next letter in the same row replaces the letter in the plain text. If the letters are in the same column, then the next letter in the column replaces the letter in the plain text. Otherwise, 
-  </li>
+  <li>
+    The Playfair cipher is a substitution cipher that is not monoalphabetic. The key is formed using a 5x5 grid, one space for each letter except for i/j, which share a space. The plain text is encoded two letters at a time. If the letters are in the same row of the key square, the next letter in the same row replaces the letter in the plain text. If the letters are in the same column, then the next letter in the column replaces the letter in the plain text. Otherwise, 
+  </li><br><br>
   
-</ol>
+  <li>
+    The difference between a monoalphabetic cipher and a polyalphabetic cipher is that a monoalphabetic cipher has only one alphabet, meaning that each letter only maps to one other unique letter, whereas a polyalphabetic cipher may have multiple alphabets, where a letter might not uniquely map to another letter, and instead map to multiple letters.
+  </li><br><br>
+  
+  <li>
+    A one-time pad is a cipher for which a key that is the length of the cipher text is used and discarded after the key is used once. Two problems with this method is that a key must be generated for every message and it is difficult to give the key to the receiver to decode without additional measures of security.
+  </li><br><br>
+  
+  <li>
+    A transposition cipher is any cipher in which the characters of plain text are reorganized to form a cipher text.
+  </li><br><br>
+  
+  <li>
+    Steganography is the method of concealing plaintext withing a broader message or media. For instance, you could conceal the message in an image, using the least significant bit for the color as the bit to store the message in. It is not necessarily considered encryption.
+  </li><br><br>
+  
+</ol><br><br>
 <h3 id="problems">Problems</h3><br>
 <h3 id="coding">Coding Problems</h3><br>
