@@ -180,7 +180,7 @@
     It is very easy to solve for <i>a</i>, since we first obtain 15<i>a</i> = 19 <i>mod</i> 26 = 26 + 19 = 45. Therefore <i>a</i> = 3. Thereafter, we use the first equation to find that <i>b</i> = 15.
   </li><br><br>
   <li>
-    I created a script to help analyze the encoded text. First, as suggested, I looked at letter frequencies and ngram frequencies. We expect the word "the" the most times for trigrams and 'e' and 't' for individual letters. The most frequent characters were '8' and ';' respectively and the most frequent trigram was ';48'. This obviously fits with '8' corresponding to 'e' and ';' corresponding to 't'. We also guess that '4' is 'h'. Below is the resultant text from these assumptions (d is double dagger, s is single dagger, p is new paragraph symbol):<br>
+    I created a script to help analyze the encoded text. First, as suggested, I looked at letter frequencies and ngram frequencies. We expect the word "the" the most times for trigrams and 'e' and 't' for individual letters. The most frequent characters were '8' and ';' respectively and the most frequent trigram was ';48'. This obviously fits with '8' corresponding to 'e' and ';' corresponding to 't'. We also guess that '4' is 'h'. Below is the resultant text from these assumptions (d is double dagger, s is single dagger, p is new paragraph symbol):<br><br>
     
   ```
    53dds305))6*THE26)Hd.)Hd)TE06*THEsEp60))E5TT]E*T:d*EsE3
@@ -189,7 +189,7 @@
   HE5s52EE06*E1
   (d9THET(EETH(d?3HTHE)HdT161T:1EETd?T
   ```
-   In the last line, we see 'T(EETH', but really we expect 'T(EE' to be 'TREE', so we try '(' as 'R'. Then a 'THR' appears and we expect the next letter to be 'O', therefore 'd' goes to 'O'. There is also an 'H' near after, so we might expect the word 'THROUGH'. We also try '?' going to 'U' and '3' going to 'G'. We then have:
+   <br><br>In the last line, we see 'T(EETH', but really we expect 'T(EE' to be 'TREE', so we try '(' as 'R'. Then a 'THR' appears and we expect the next letter to be 'O', therefore 'd' goes to 'O'. There is also an 'H' near after, so we might expect the word 'THROUGH'. We also try '?' going to 'U' and '3' going to 'G'. We then have:<br><br>
 ```  
 5GOOsG05))6*THE26)HO.)HO)TE06*THEsEp60))E5TT]E*T:O*EsEG
 REE)5*sTH6RTEE*96*UTE)*ORTHE5)T5*s2:*ORTH956*2R5*-H)EE*
@@ -197,8 +197,18 @@ TH0692E5)T)6sE)HOOT1RO9THE0E1TE:EO1THEsE5TH)
 HE5s52EE06*E1
 RO9THETREETHROUGHTHE)HOT161T:1EETOUT
 ```
+  <br><br>We see the word in the last line ')HOT', and '\*ORTH' in the second line. We expect ')' to be 'S' and '\*' to be 'N'. From this, the second line reveals the word 'THIRTEEN', if we replace '6' with 'I' and subsequentely 'MINUTES' if we replace '9' with 'M'. We also realize one of the NORTH's in the second line should be 'NORTHEAST', and we get '5' is 'A'. The new text is:<br><br>
   
-  </li>
+```
+AGOOsG0ASSINTHE2ISHO.SHOSTE0INTHEsEpI0SSEATT]ENT:ONEsEG
+REESANsTHIRTEENMINUTESNORTHEASTANs2:NORTHMAIN2RAN-HSEEN
+TH0IM2EASTSIsESHOOT1ROMTHE0E1TE:EO1THEsEATHS
+HEAsA2EE0INE1
+ROMTHETREETHROUGHTHESHOT1I1T:1EETOUT
+```
+  <br><br>The next obvious transformation is 's' to 'D', as the text is talking about directions and we want the word 'DEGREES'. By changing '0' to 'L', we find the word 'GLASS', and by changing '1' to 'F' we find several 'FROM's and a 'LEFT'. We guess '2' is 'B' and ':' is 'Y' to get the word 'BY' a couple times. Each other letter is used once, so we deduce them by forming words with the letters around them, and we get to our final result (A 'V' was missing in the 2nd line, presumably because the PDF couldn't print the symbol used for it):<br><br>
+  A good glass in the bishop's shostel in the devils seat twenty-one degrees and thirteen minutes northeast by north main branch seventh limb east side, shoot from the left eye of the deaths head a beeline from the tree through the shot fifty feet out.
+  </li><br><br>
 </ol>
   
 <h3 id="coding">Coding Problems</h3><br>
