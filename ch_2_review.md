@@ -209,6 +209,28 @@ ROMTHETREETHROUGHTHESHOT1I1T:1EETOUT
   <br><br>The next obvious transformation is 's' to 'D', as the text is talking about directions and we want the word 'DEGREES'. By changing '0' to 'L', we find the word 'GLASS', and by changing '1' to 'F' we find several 'FROM's and a 'LEFT'. We guess '2' is 'B' and ':' is 'Y' to get the word 'BY' a couple times. Each other letter is used once, so we deduce them by forming words with the letters around them, and we get to our final result (A 'V' was missing in the 2nd line, presumably because the PDF couldn't print the symbol used for it):<br><br>
   A good glass in the bishop's shostel in the devils seat twenty-one degrees and thirteen minutes northeast by north main branch seventh limb east side, shoot from the left eye of the deaths head a beeline from the tree through the shot fifty feet out.
   </li><br><br>
+  
+  <li>
+    <ol>
+      <li>
+        It is encrypted using a monoalphabetic cipher. I first tried creating the alphabet with the first letters of each word, then using each letter from the sentence. I found the key to be an encoder rather than a decoder, which caused some problems (I just had to reverse the way I used the monoalphabetic substitution). The result is 'basilisk to leviathan blake is contact'.
+      </li>
+      <li>
+        If you know that it is encoded monoalphabetically, then it is possible to break this cipher, though it is not very easy, since it is very short and most words are longer than 5 characters. Guessing the two letter words could give some context. 
+      </li>
+      <li>
+        If the last sentence does not have enough characters, the substitution might not be good enough to cover some of the text structures. Therefore, it is easier to use the first sentence, since you can use the second sentence as overflow if necessary.
+      </li>
+    </ol>
+  </li><br><br>
+  
+  <li>
+    The question asks if we are able to determine how this was encrypted. My answer? Not at all. Looking at the solution it seems the dead give away is the large number, the C2, and the proper nouns. This is supposed to tell us that we should go to the 534 page of a book, look at the second column, then use the numbers to pick words from that column. Douglas and Birlstone don't appear in the column, so the encryptor was forced to leave them as plain text.
+  </li><br><br>
+  
+  <li>
+    I could access the ftp server the text was directing me to, so I looked at the answer key to find how to encrypt the message, and I used it to write code to encode and decode the messages given a key and a message.
+  </li><br><br>
 </ol>
   
 <h3 id="coding">Coding Problems</h3><br>
