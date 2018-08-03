@@ -178,7 +178,26 @@
     4<i>a</i> + <i>b</i> = 1 <i>mod</i> 26<br>
     19<i>a</i> + <i>b</i> = 20 <i>mod</i> 26<br><br>
     It is very easy to solve for <i>a</i>, since we first obtain 15<i>a</i> = 19 <i>mod</i> 26 = 26 + 19 = 45. Therefore <i>a</i> = 3. Thereafter, we use the first equation to find that <i>b</i> = 15.
+  </li><br><br>
+  <li>
+    I created a script to help analyze the encoded text. First, as suggested, I looked at letter frequencies and ngram frequencies. We expect the word "the" the most times for trigrams and 'e' and 't' for individual letters. The most frequent characters were '8' and ';' respectively and the most frequent trigram was ';48'. This obviously fits with '8' corresponding to 'e' and ';' corresponding to 't'. We also guess that '4' is 'h'. Below is the resultant text from these assumptions (d is double dagger, s is single dagger, p is new paragraph symbol):<br>
     
+  ```
+   53dds305))6*THE26)Hd.)Hd)TE06*THEsEp60))E5TT]E*T:d*EsE3
+  (EE)5*sTH6(TEE*96*?TE)*d(THE5)T5*s2:*d(TH956*2(5*-H)EE*
+  TH0692E5)T)6sE)HddT1(d9THE0E1TE:Ed1THEsE5TH)
+  HE5s52EE06*E1
+  (d9THET(EETH(d?3HTHE)HdT161T:1EETd?T
+  ```
+   In the last line, we see 'T(EETH', but really we expect 'T(EE' to be 'TREE', so we try '(' as 'R'. Then a 'THR' appears and we expect the next letter to be 'O', therefore 'd' goes to 'O'. There is also an 'H' near after, so we might expect the word 'THROUGH'. We also try '?' going to 'U' and '3' going to 'G'. We then have:
+```  
+5GOOsG05))6*THE26)HO.)HO)TE06*THEsEp60))E5TT]E*T:O*EsEG
+REE)5*sTH6RTEE*96*UTE)*ORTHE5)T5*s2:*ORTH956*2R5*-H)EE*
+TH0692E5)T)6sE)HOOT1RO9THE0E1TE:EO1THEsE5TH)
+HE5s52EE06*E1
+RO9THETREETHROUGHTHE)HOT161T:1EETOUT
+```
+  
   </li>
 </ol>
   
