@@ -36,3 +36,46 @@ class MonoAlphabeticCipherText:
 with open("ch_2_p4.txt") as f:
     text = MonoAlphabeticCipherText(f.read())
 
+
+print "\n\nOriginal text"
+print text
+
+print "\nSingle letter frequencies"
+print text.ngram_freq(1)
+
+print "\nTrigram frequencies"
+print text.ngram_freq(3)
+
+print "\nFirst replacement"
+text.replace_val('8', 'E')
+text.replace_val('4', 'H')
+text.replace_val(';', 'T')
+print text
+
+print "\nSecond replacement"
+text.replace_val('(', 'R')
+text.replace_val('d', 'O')
+text.replace_val('?', 'U')
+text.replace_val('3', 'G')
+print text
+
+print "\nThird replacement"
+text.replace_val(')', 'S')
+text.replace_val('*', 'N')
+text.replace_val('6', 'I')
+text.replace_val('9', 'M')
+text.replace_val('5', 'A')
+print text
+
+print "\nFourth replacement"
+text.replace_val('s', 'D')
+text.replace_val('0', 'L')
+text.replace_val('1', 'F')
+text.replace_val('2', 'B')
+text.replace_val(':', 'Y')
+text.replace_val('-', 'C')
+text.replace_val('.', 'P')
+text.replace_val(']', 'W')
+text.replace_val('p', 'V')
+print text
+
