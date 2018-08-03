@@ -155,4 +155,31 @@
   
 </ol><br><br>
 <h3 id="problems">Problems</h3><br>
+<ol>
+  <li>
+    Affine Cipher
+    <ol>
+      <li>
+        There are no limitations on <i>b</i> for an affine cipher. The reason is there exists a one to one relationship between plain text characters and cipher text characters when shifting by a constant number of characters. 
+      </li>
+      <li>
+        This is unlike the constant <i>a</i>, which multiplies the plain text character by a value. Multiple inputs may have the same result with the same multiplicative constant, therefore, the function is not one to one. Some values of <i>a</i> work and others don't. We must have <i>a</i> be relatively prime to the modulus base, in this case 26. 
+      </li>
+      <li>
+        Therefore, the values of <i>a</i> that are allowed are 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, and 25.
+      </li>
+    </ol>
+  </li><br><br>
+  <li>
+    Limiting <i>b</i> to values less than 26, we find there are 26 * 12 = 312 possible one to one Affine ciphers. Out of the 312, 26 of them are Caesar ciphers (with <i>a</i> = 1)
+  </li><br><br>
+  <li>
+    In order to solve the problem we assume that 'B' (<i>n</i>=1) corresponds to 'E' (<i>n</i>=4) and that 'U' (<i>n</i>=20) corresponds to 'T' (<i>n</i>=19), based upon general letter frequencies. We then have a linear system of equations: <br><br> 
+    4<i>a</i> + <i>b</i> = 1 <i>mod</i> 26<br>
+    19<i>a</i> + <i>b</i> = 20 <i>mod</i> 26<br><br>
+    It is very easy to solve for <i>a</i>, since we first obtain 15<i>a</i> = 19 <i>mod</i> 26 = 26 + 19 = 45. Therefore <i>a</i> = 3. Thereafter, we use the first equation to find that <i>b</i> = 15.
+    
+  </li>
+</ol>
+  
 <h3 id="coding">Coding Problems</h3><br>
