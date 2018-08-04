@@ -231,6 +231,10 @@ ROMTHETREETHROUGHTHESHOT1I1T:1EETOUT
   <li>
     I could access the ftp server the text was directing me to, so I looked at the answer key to find how to encrypt the message, and I used it to write code to encode and decode the messages given a key and a message.
   </li><br><br>
+  
+  <li>
+    The key is made from every 4th letter, (a, e, i, m, q, u, y) which corresponds to SPUTNIK
+  </li><br><br>
 </ol>
   
 <h3 id="coding">Coding Problems</h3><br>
